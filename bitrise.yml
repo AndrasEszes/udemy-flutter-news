@@ -5,6 +5,8 @@ workflows:
   primary:
     envs:
       - TEST: test
+        opts:
+          is_expand: true
     description: |
       Builds project and runs tests.
 
