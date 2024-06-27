@@ -25,6 +25,13 @@ workflows:
         - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
     - save-dart-cache@1: {}
     - deploy-to-bitrise-io@2: {}
+  _clone:
+    summary: Clone the target repo
+    steps:
+    - git-clone@8:
+        inputs:
+        - sparse_directories:
+        - merge_pr: 'no'
   deploy:
     description: |
       Builds and deploys app using [Deploy to bitrise.io Step](https://devcenter.bitrise.io/en/getting-started/getting-started-with-flutter-apps.html#deploying-a-flutter-app).
@@ -54,13 +61,6 @@ workflows:
         - platform: ios
         - ios_output_type: archive
     - deploy-to-bitrise-io@2: {}
-  _clone:
-    summary: Clone the target repo
-    steps:
-    - git-clone@8:
-        inputs:
-        - sparse_directories:
-        - merge_pr: 'no'
 meta:
   bitrise.io:
     stack: osx-xcode-15.0.x
