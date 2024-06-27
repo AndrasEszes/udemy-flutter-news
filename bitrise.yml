@@ -27,7 +27,7 @@ workflows:
     - deploy-to-bitrise-io@2: {}
     meta:
       bitrise.io:
-        machine_type_id: g2.12core
+        machine_type_id: g2-m1-max.10core
   _clone:
     summary: Clone the target repo
     steps:
