@@ -67,7 +67,7 @@ workflows:
 meta:
   bitrise.io:
     stack: osx-xcode-15.1.x
-    machine_type_id: g2-m2-pro.12core
+    machine_type_id: g2-m1-max.10core
 app:
   envs:
   - opts:
