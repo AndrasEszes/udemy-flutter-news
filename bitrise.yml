@@ -54,6 +54,13 @@ workflows:
         - platform: ios
         - ios_output_type: archive
     - deploy-to-bitrise-io@2: {}
+  _clone:
+    summary: Clone the target repo
+    steps:
+    - git-clone@8:
+        inputs:
+        - sparse_directories:
+        - merge_pr: 'no'
 meta:
   bitrise.io:
     stack: osx-xcode-15.0.x
