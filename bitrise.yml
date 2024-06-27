@@ -25,6 +25,9 @@ workflows:
         - project_location: $BITRISE_FLUTTER_PROJECT_LOCATION
     - save-dart-cache@1: {}
     - deploy-to-bitrise-io@2: {}
+    meta:
+      bitrise.io:
+        machine_type_id: g2.12core
   _clone:
     summary: Clone the target repo
     steps:
